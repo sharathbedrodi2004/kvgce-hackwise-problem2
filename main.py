@@ -10,7 +10,7 @@ import random
 def load_asteroids(filename):
     """Load asteroid data from a file, auto-generating IDs if they don't exist"""
     asteroids = []
-    with open("requirements.txt", 'r') as file:
+    with open("asteroid.txt", 'r') as file:
         # Check if first line is a header by looking for non-numeric values
         first_line = file.readline().strip()
         parts = first_line.split()
@@ -358,7 +358,7 @@ def write_collisions_to_file(collisions, filename="sample_output/collisions.txt"
 
 def main():
     """Main function to run the simulation with visualization"""
-    asteroid_filename = "requirements.txt"  # Default to using requirements.txt
+    asteroid_filename = "asteroid.txt"  # Default to using asteroid.txt
     
     start_time = time.time()
     print(f"Loading asteroid data from {asteroid_filename}...")
